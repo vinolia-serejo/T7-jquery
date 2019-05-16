@@ -1,7 +1,6 @@
 function carregaCarta(){
-    $.getJSON('tarot.json', trocaCartaAleatoria); //consumindo um arquivo
-   
-
+    $.get('http://localhost:3000/cartas', trocaCartaAleatoria);//consumido do nosso servidor
+    // $.getJSON('tarot.json', trocaCartaAleatoria); //consumindo um arquivo
 }
 function trocaCartaAleatoria(cartas, status){
     if(status == 'success'){
